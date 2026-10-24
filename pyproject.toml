@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "at_vmd"
+version = "0.1.0"
+description = "Amortized Task-Guided Variational Mode Decomposition for electricity load forecasting"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = [
+    "torch>=2.2",
+    "numpy",
+    "pandas",
+    "matplotlib",
+]
+
+[tool.setuptools.packages.find]
+include = ["at_vmd", "at_vmd.*"]
+
+[tool.setuptools.package-data]
+"at_vmd.baselines.third_party.tsl" = ["LICENSE"]
